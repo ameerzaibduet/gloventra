@@ -51,10 +51,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/book-consultation"
-              className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-1.5 rounded-full font-medium transition-all duration-200 shadow-sm"
+              href="/online-consultation"
+              className="bg-green-500 hover:bg-gray-700 text-black  px-4 py-1.5 rounded-full font-medium transition-all duration-200 shadow-lg"
             >
-              Book Now
+              Get Free Consultation
             </Link>
           </div>
 
@@ -91,10 +91,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/book-consultation"
+            href="/online-consultation"
             className="block bg-gray-800 hover:bg-gray-700 text-white px-4 py-1.5 rounded-full font-medium mt-2 transition-all duration-200 shadow-sm"
           >
-            Book Now
+            Get Free Consultation
           </Link>
         </div>
       )}

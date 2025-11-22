@@ -31,10 +31,10 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start">
             <Link
-              href="/book-consultation"
+              href="/online-consultation"
               className="bg-gray-100 text-black hover:bg-gray-300 px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-center"
             >
-              Book Free Consultation
+              Get Free Consultation
             </Link>
             <Link
               href="/contact"

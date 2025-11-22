@@ -29,8 +29,8 @@ function HeroSection() {
           </p>
         </motion.div>
 
-        <motion.div {...fadeUp(0.2)} className="md:w-1/2 relative w-full h-96 rounded-3xl overflow-hidden shadow-lg">
-          <Image src="/about-us-hero.webp" alt="About Us" fill className="object-cover"/>
+        <motion.div {...fadeUp(0.3)} className="md:w-1/2 relative w-full h-96 rounded-3xl overflow-hidden shadow-lg">
+          <Image src="/aboutushero.jpg" alt="About Us" fill className="object-cover"/>
           <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-black/90 to-transparent" />
         </motion.div>
       </div>
@@ -128,39 +128,57 @@ function AchievementsSection() {
   );
 }
 
-/* -------------------- Team Philosophy Section -------------------- */
-const teamPhilosophy = [
-  { name: "HAKIM KHAN", role: "Founder & CEO", desc: "Passionate about guiding students and professionals globally.", image: "/team1.webp" },
-  { name: "AJAZ KHAN", role: "Operations Head", desc: "Ensuring smooth experience for every client.", image: "/team2.webp" },
-  { name: "AMEER ZAIB", role: "Senior Counsellor", desc: "Dedicated to personalized guidance for each student.", image: "/team3.webp" },
-];
+/* -------------------- Team Philosophy Section (Updated) -------------------- */
+const teamFounder = {
+  name: "HAKIM KHAN",
+  role: "Founder & CEO",
+  desc: `With a vision to guide students and professionals globally, 
+Gloventra Consultancy was built on trust, transparency, and 
+personalized support. Under his leadership, the company has grown 
+into one of the most reliable consultancy platforms for global 
+education and career pathways.`,
+  image: "/team1.webp",
+};
 
 function TeamSection() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-10">
+        
         <motion.h2 {...fadeUp(0)} className="text-4xl font-bold text-center mb-16">
-          Our Team Philosophy
+          Meet Our Founder
         </motion.h2>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-          {teamPhilosophy.map((t, idx) => (
-            <motion.div key={idx} {...fadeUp(idx * 0.2)} className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col h-full">
-              <div className="relative w-full h-64">
-                <Image src={t.image} alt={t.name} fill className="object-cover"/>
-              </div>
-              <div className="p-6 flex flex-col justify-center flex-grow text-center">
-                <p className="font-bold text-lg">{t.name}</p>
-                <p className="text-gray-500 text-sm mb-2">{t.role}</p>
-                <p className="text-gray-600 text-sm">{t.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Founder Left - Text Right */}
+        <motion.div
+          {...fadeUp(0.2)}
+          className="flex flex-col md:flex-row items-center gap-12 bg-white rounded-3xl shadow-lg p-10"
+        >
+          {/* Founder Image */}
+          <div className="relative w-full md:w-1/2 h-96 rounded-3xl overflow-hidden shadow-xl">
+            <Image 
+              src={teamFounder.image}
+              alt={teamFounder.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Founder Text */}
+          <div className="md:w-1/2">
+            <h3 className="text-3xl font-bold mb-2">{teamFounder.name}</h3>
+            <p className="text-gray-500 font-semibold mb-4">{teamFounder.role}</p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              {teamFounder.desc}
+            </p>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
 }
+
 
 /* -------------------- Call To Action -------------------- */
 function CallToAction() {
