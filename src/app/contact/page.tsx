@@ -52,7 +52,7 @@ export default function ContactPage() {
           >
             <Mail className="w-10 h-10 text-gray-900 mb-4" />
             <p className="font-semibold">Email Us</p>
-            <p className="text-gray-600 mt-2">contact@gloventra.com</p>
+            <p className="text-gray-600 mt-2">gloventraconsultancy@gmail.com</p>
           </motion.a>
 
           <motion.a
@@ -62,7 +62,7 @@ export default function ContactPage() {
           >
             <Phone className="w-10 h-10 text-gray-900 mb-4" />
             <p className="font-semibold">Call Us</p>
-            <p className="text-gray-600 mt-2">+123 456 7890</p>
+            <p className="text-gray-600 mt-2">+923087601311</p>
           </motion.a>
         </div>
       </section>

@@ -1,36 +1,41 @@
-import nodemailer from "nodemailer";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
-    const data = await req.json();
+    const body = await req.json();
+    const { name, email, phone, country, message } = body;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    if (!name || !email || !phone || !country || !message) {
+      return NextResponse.json(
+        { success: false, message: "All fields are required" },
+        { status: 400 }
+      );
+    }
 
-    const mailOptions = {
-      from: `"${data.name}" <${data.email}>`,
-      to: process.env.EMAIL_TO,
-      subject: `New Consultation Request from ${data.name}`,
-      text: `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-Country: ${data.country}
-Message: ${data.message}
-      `,
-    };
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    );
 
-    await transporter.sendMail(mailOptions);
+    const { data, error } = await supabase
+      .from("consultations")
+      .insert([{ name, email, phone, country, message }]);
 
-    return NextResponse.json({ success: true });
+    if (error) {
+      console.error("Supabase Insert Error:", error);
+      return NextResponse.json(
+        { success: false, message: "Database error", error: error.message },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (err) {
-    console.error(err);
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.error("Server Error:", err);
+    return NextResponse.json(
+      { success: false, message: "Server error" },
+      { status: 500 }
+    );
   }
 }
