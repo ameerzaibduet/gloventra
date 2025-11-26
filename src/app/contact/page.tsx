@@ -71,7 +71,7 @@ export default function ContactPage() {
       <section className="py-24 bg-gray-100">
         <div className="max-w-[800px] mx-auto px-10">
           <motion.h2 {...fadeUp(0)} className="text-4xl font-bold text-center mb-16">
-            Send Us a Message
+            Send Us
           </motion.h2>
 
           <motion.form {...fadeUp(0.2)} className="grid gap-6" action="mailto:contact@gloventra.com" method="POST" encType="text/plain">
