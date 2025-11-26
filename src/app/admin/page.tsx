@@ -61,10 +61,10 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+        <h1 className="text-3xl font-bold mt-30">Admin Dashboard</h1>
         <button
           onClick={handleLogout}
-          className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
+          className="px-4 py-2 mt-30 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
         >
           Logout
         </button>
