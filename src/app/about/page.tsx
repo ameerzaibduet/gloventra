@@ -137,7 +137,7 @@ Gloventra Consultancy was built on trust, transparency, and
 personalized support. Under his leadership, the company has grown 
 into one of the most reliable consultancy platforms for global 
 education and career pathways.`,
-  image: "/team1.webp",
+  image: "/ceo.jpeg",
 };
 
 function TeamSection() {

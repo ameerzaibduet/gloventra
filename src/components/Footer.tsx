@@ -66,15 +66,15 @@ export default function Footer() {
           <ul className="space-y-4 text-gray-400 text-sm">
             <li className="flex items-start space-x-3 hover:text-white transition">
               <MapPin size={18} className="mt-1" />
-              <span>Lahore, Pakistan</span>
+              <span>2nd Floor, 20-C, Ittehad Lane-12, Phase 2 Extension, DHA Karachi</span>
             </li>
             <li className="flex items-start space-x-3 hover:text-white transition">
               <Phone size={18} className="mt-1" />
-              <span>+92 300 1234567</span>
+              <span>+923087601311</span>
             </li>
             <li className="flex items-start space-x-3 hover:text-white transition">
               <Mail size={18} className="mt-1" />
-              <span>support@gloventra.com</span>
+              <span>gloventraconsultancy@gmail.com</span>
             </li>
           </ul>
         </div>

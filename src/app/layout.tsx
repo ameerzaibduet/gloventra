@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Your Consultancy",
+  title: "Gloventra Consultancy",
   description: "Trusted Consultancy for Study Abroad & Careers",
 };
 
@@ -19,9 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <Navbar />
+        <Navbar/>
         {children}
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );

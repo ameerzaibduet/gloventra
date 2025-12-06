@@ -39,7 +39,7 @@ export default function ContactPage() {
           >
             <MapPin className="w-10 h-10 text-gray-900 mb-4" />
             <p className="font-semibold">Our Office</p>
-            <p className="text-gray-600 mt-2">123 Gloventra Street, City, Country</p>
+            <p className="text-gray-600 mt-2">2nd Floor, 20-C, Ittehad Lane-12, Phase 2 Extension, DHA Karachi</p>
             <span className="flex items-center gap-1 mt-2 text-gray-500">
               <ExternalLink className="w-4 h-4" /> View on Map
             </span>
@@ -116,7 +116,7 @@ export default function ContactPage() {
       {/* Google Map Embed */}
       <section className="relative h-[500px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019085145146!2d-122.42067938468133!3d37.77928077975839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5e3d9c0d%3A0x58c4c3b0f3d14c12!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1617290329301!5m2!1sen!2s"
+          src="https://www.google.com/maps?q=2nd+Floor,+20-C,+Ittehad+Lane-12,+Phase+2+Extension,+DHA+Karachi&output=embed"
           className="w-full h-full border-0"
           allowFullScreen
           loading="lazy"
