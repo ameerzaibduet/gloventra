@@ -10,7 +10,7 @@ export default function Home() {
       <AboutSection />
       <main className="container mx-auto px-6 mt-20">
         {/* You can add Services, Destinations, Testimonials sections here */}
-      </main>
+       </main>
     </>
   );
 }
