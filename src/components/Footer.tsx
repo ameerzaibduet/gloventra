@@ -70,7 +70,9 @@ export default function Footer() {
             </li>
             <li className="flex items-start space-x-3 hover:text-white transition">
               <Phone size={18} className="mt-1" />
-              <span>+923087601311</span>
+              <span>+923178248255 </span>
+              <span>02135318225</span>
+
             </li>
             <li className="flex items-start space-x-3 hover:text-white transition">
               <Mail size={18} className="mt-1" />

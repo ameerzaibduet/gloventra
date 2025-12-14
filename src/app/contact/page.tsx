@@ -14,14 +14,37 @@ export default function ContactPage() {
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-32 text-center">
-        <motion.h1 {...fadeUp(0)} className="text-5xl md:text-6xl font-bold mb-6">
-          Get in Touch
-        </motion.h1>
-        <motion.p {...fadeUp(0.2)} className="text-gray-300 text-lg md:text-xl">
-          We are here to help you start your global journey. Reach out for inquiries, consultation, or support.
-        </motion.p>
-      </section>
+<section className="relative h-[80vh] flex items-center">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('/contact-banner.jpg')", // 👈 place image in /public/images/
+    }}
+  />
+
+  {/* Black Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+
+  {/* Content */}
+  <div className="relative z-10 max-w-[1200px] mx-auto px-10 text-left text-white">
+    <motion.h1
+      {...fadeUp(0)}
+      className="text-5xl md:text-6xl font-bold mb-6 max-w-[700px]"
+    >
+      Get in Touch
+    </motion.h1>
+
+    <motion.p
+      {...fadeUp(0.2)}
+      className="text-gray-300 text-lg md:text-xl max-w-[600px]"
+    >
+      We are here to help you start your global journey. Reach out for inquiries,
+      consultation, or support.
+    </motion.p>
+  </div>
+</section>
 
       {/* Contact Info */}
       <section className="py-24 max-w-[1200px] mx-auto px-10">
@@ -62,7 +85,7 @@ export default function ContactPage() {
           >
             <Phone className="w-10 h-10 text-gray-900 mb-4" />
             <p className="font-semibold">Call Us</p>
-            <p className="text-gray-600 mt-2">+923087601311</p>
+            <p className="text-gray-600 mt-2">02135318225</p>
           </motion.a>
         </div>
       </section>
