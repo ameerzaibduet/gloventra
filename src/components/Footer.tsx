@@ -25,15 +25,36 @@ export default function Footer() {
             Trusted partner for Study Abroad, Visa Processing, and Global Career Guidance.
           </p>
 
-          {/* Social Icons */}
-          <div className="flex space-x-3 mt-3">
-            {[Facebook, Instagram, Linkedin].map((Icon, idx) => (
-              <Link key={idx} href="#" className="group relative w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition">
-                <Icon size={20} className="text-gray-400 group-hover:text-white transition" />
-                <span className="absolute inset-0 rounded-full border border-gray-700 opacity-0 group-hover:opacity-100 transition"></span>
-              </Link>
-            ))}
-          </div>
+        {/* Social Icons */}
+<div className="flex space-x-3 mt-3">
+  {/* Facebook */}
+  <Link
+    href="https://www.facebook.com/profile.php?id=61583287816122"
+    target="_blank"
+    className="group relative w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition"
+  >
+    <Facebook size={20} className="text-gray-400 group-hover:text-white transition" />
+  </Link>
+
+  {/* Instagram */}
+  <Link
+    href="https://www.instagram.com/gloventraconsultancy/"
+    target="_blank"
+    className="group relative w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-pink-600 transition"
+  >
+    <Instagram size={20} className="text-gray-400 group-hover:text-white transition" />
+  </Link>
+
+  {/* LinkedIn */}
+  <Link
+    href="https://www.linkedin.com/company/your_linkedin_page"
+    target="_blank"
+    className="group relative w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-700 transition"
+  >
+    <Linkedin size={20} className="text-gray-400 group-hover:text-white transition" />
+  </Link>
+</div>
+
         </div>
 
         {/* QUICK LINKS */}
